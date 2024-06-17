@@ -1,0 +1,54 @@
+.frame {
+  height: 100vh;
+}
+
+.frame .rs-sidebar {
+  background: #ffffff;
+}
+
+.frame .rs-sidenav {
+  flex: 1 1 auto;
+  transition: none !important;
+  border-top: 1px solid #e2dddd; /* Assuming @B100 is #e1e5ea */
+  width: 100%;
+}
+
+.frame .rs-content {
+  padding: 0 10px;
+}
+
+.frame .rs-content .rs-panel-header .title {
+  font-size: 20px;
+}
+
+.frame .rs-content .rs-panel-header .rs-breadcrumb {
+  margin-bottom: 0;
+}
+
+.frame .nav-toggle {
+  border-top: 1px solid #e1e5ea; /* Assuming @B100 is #e1e5ea */
+}
+
+.frame .rs-sidenav-item.active,
+.frame .rs-dropdown-item.active {
+  color: #3c6dcc !important; /* Assuming @H500 is #3c6dcc */
+}
+
+.frame .rs-sidenav-item-icon,
+.frame .rs-dropdown-item-icon {
+  height: 1.3em !important;
+  width: 1.3em !important;
+}
+
+.brand {
+  padding: 10px 18px;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.brand a {
+  text-decoration: none;
+}
