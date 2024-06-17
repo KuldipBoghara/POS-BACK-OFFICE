@@ -39,8 +39,8 @@ const Department = () => {
           <h3 className="title">Department</h3>
           <Breadcrumb>
             <Breadcrumb.Item href="/home">Home</Breadcrumb.Item>
-            <Breadcrumb.Item>Tables</Breadcrumb.Item>
-            <Breadcrumb.Item active>department</Breadcrumb.Item>
+            <Breadcrumb.Item>Item Management</Breadcrumb.Item>
+            <Breadcrumb.Item active>Department</Breadcrumb.Item>
           </Breadcrumb>
         </>
       }

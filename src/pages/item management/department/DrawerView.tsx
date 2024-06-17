@@ -59,17 +59,16 @@ const DrawerView = (props: DrawerProps) => {
         <Form fluid>
           <Form.Group>
             <Form.ControlLabel>Name</Form.ControlLabel>
-            <Form.Control name="name" />
+            <Form.Control name="name" placeholder="Enter Name" />
           </Form.Group>
 
           <Form.Group>
             <Form.ControlLabel>Surcharge</Form.ControlLabel>
-            <Form.Control name="surcharge" type="number" />
-          </Form.Group>
-
-          <Form.Group>
-            <Form.ControlLabel>Street</Form.ControlLabel>
-            <Form.Control name="street" />
+            <Form.Control
+              name="surcharge"
+              type="number"
+              placeholder="Enter Shurcharge"
+            />
           </Form.Group>
 
           <p>Age</p>

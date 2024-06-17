@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Input, InputGroup, Table, Button, DOMHelper, Stack } from 'rsuite';
-import SearchIcon from '@rsuite/icons/Search';
+import { Table, DOMHelper } from 'rsuite';
+
 import DrawerView from './DrawerView';
-import { ActionCell, StatusCell } from './Cells';
+import { StatusCell } from './Cells';
 
 const { Column, HeaderCell, Cell } = Table;
 const { getHeight } = DOMHelper;
@@ -12,7 +12,6 @@ const DataTable = ({ data }) => {
 
   const [sortColumn, setSortColumn] = useState();
   const [sortType, setSortType] = useState();
-  const [searchKeyword, setSearchKeyword] = useState('');
 
   const handleSortColumn = (sortColumn, sortType) => {
     setSortColumn(sortColumn);
@@ -22,7 +21,7 @@ const DataTable = ({ data }) => {
   const filteredData = () => {
     const filtered = data.filter((item) => {
       return Object.keys(item).some((key) =>
-        item[key].toString().toLowerCase().includes(searchKeyword.toLowerCase())
+        item[key].toString().toLowerCase()
       );
     });
 
@@ -51,25 +50,6 @@ const DataTable = ({ data }) => {
 
   return (
     <>
-      <Stack className="table-toolbar" justifyContent="space-between">
-        <Button appearance="primary" onClick={() => setShowDrawer(true)}>
-          Add Category
-        </Button>
-
-        <Stack spacing={6}>
-          <InputGroup inside>
-            <Input
-              placeholder="Search"
-              value={searchKeyword}
-              onChange={setSearchKeyword}
-            />
-            <InputGroup.Addon>
-              <SearchIcon />
-            </InputGroup.Addon>
-          </InputGroup>
-        </Stack>
-      </Stack>
-
       <Table
         height={Math.max(getHeight(window) - 200, 400)}
         data={filteredData()}
@@ -78,28 +58,23 @@ const DataTable = ({ data }) => {
         onSortColumn={handleSortColumn}
       >
         <Column flexGrow={1} sortable>
-          <HeaderCell>Category</HeaderCell>
-          <Cell dataKey="category" />
+          <HeaderCell>Title</HeaderCell>
+          <Cell dataKey="title" />
         </Column>
 
         <Column flexGrow={1} sortable>
-          <HeaderCell>Department</HeaderCell>
-          <Cell dataKey="department" />
+          <HeaderCell>Tax Value (%)</HeaderCell>
+          <Cell dataKey="tax_value" />
         </Column>
 
-        <Column flexGrow={1} sortable>
-          <HeaderCell>Sub Category</HeaderCell>
-          <Cell dataKey="sub_category" />
+        <Column flexGrow={1}>
+          <HeaderCell>Default Selected</HeaderCell>
+          <Cell dataKey="default_selected" />
         </Column>
 
         <Column flexGrow={1}>
           <HeaderCell>Status</HeaderCell>
           <StatusCell dataKey="status" />
-        </Column>
-
-        <Column flexGrow={1}>
-          <HeaderCell>Action</HeaderCell>
-          <ActionCell dataKey="actions" />
         </Column>
 
         {/* {columns.map((column) => (

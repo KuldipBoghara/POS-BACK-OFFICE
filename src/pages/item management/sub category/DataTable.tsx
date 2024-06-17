@@ -53,7 +53,7 @@ const DataTable = ({ data }) => {
     <>
       <Stack className="table-toolbar" justifyContent="space-between">
         <Button appearance="primary" onClick={() => setShowDrawer(true)}>
-          Add Category
+          Add Sub Category
         </Button>
 
         <Stack spacing={6}>
@@ -78,18 +78,18 @@ const DataTable = ({ data }) => {
         onSortColumn={handleSortColumn}
       >
         <Column flexGrow={1} sortable>
+          <HeaderCell>Sub Category</HeaderCell>
+          <Cell dataKey="sub_category" />
+        </Column>
+
+        <Column flexGrow={1} sortable>
           <HeaderCell>Category</HeaderCell>
           <Cell dataKey="category" />
         </Column>
 
         <Column flexGrow={1} sortable>
-          <HeaderCell>Department</HeaderCell>
-          <Cell dataKey="department" />
-        </Column>
-
-        <Column flexGrow={1} sortable>
-          <HeaderCell>Sub Category</HeaderCell>
-          <Cell dataKey="sub_category" />
+          <HeaderCell>No of Items</HeaderCell>
+          <Cell dataKey="no_of_items" />
         </Column>
 
         <Column flexGrow={1}>

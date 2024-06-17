@@ -8,37 +8,37 @@ const Category = () => {
       category: 'Cat ab',
       department: 'Dept 1',
       sub_category: 0,
-      Status: 'Active'
+      status: 'Active'
     },
     {
       category: 'Cat fds',
       department: 'Dept 1',
       sub_category: 1,
-      Status: 'Active'
+      status: 'Active'
     },
     {
       category: 'Cat fdsf',
       department: 'Dept 1',
       sub_category: 1,
-      Status: 'Active'
+      status: 'DeActive'
     },
     {
       category: 'Cat fsf',
       department: 'Dept 1',
       sub_category: 0,
-      Status: 'Active'
+      status: 'Active'
     },
     {
       category: 'Cat wer',
       department: 'Dept 1',
       sub_category: 1,
-      Status: 'Active'
+      status: 'Active'
     },
     {
       category: 'Cat sfs',
       department: 'Dept 1',
       sub_category: 0,
-      Status: 'Active'
+      status: 'Active'
     }
   ];
 
@@ -49,8 +49,8 @@ const Category = () => {
           <h3 className="title">Category</h3>
           <Breadcrumb>
             <Breadcrumb.Item href="/home">Home</Breadcrumb.Item>
-            <Breadcrumb.Item>Tables</Breadcrumb.Item>
-            <Breadcrumb.Item active>category</Breadcrumb.Item>
+            <Breadcrumb.Item>Item Management</Breadcrumb.Item>
+            <Breadcrumb.Item active>Category</Breadcrumb.Item>
           </Breadcrumb>
         </>
       }

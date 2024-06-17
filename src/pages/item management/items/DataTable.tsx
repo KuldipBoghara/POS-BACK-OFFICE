@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Input, InputGroup, Table, Button, DOMHelper, Stack } from 'rsuite';
 import SearchIcon from '@rsuite/icons/Search';
 import DrawerView from './DrawerView';
-import { ActionCell, StatusCell } from './Cells';
+import { ActionCell } from './Cells';
 
 const { Column, HeaderCell, Cell } = Table;
 const { getHeight } = DOMHelper;
@@ -53,7 +53,7 @@ const DataTable = ({ data }) => {
     <>
       <Stack className="table-toolbar" justifyContent="space-between">
         <Button appearance="primary" onClick={() => setShowDrawer(true)}>
-          Add Category
+          Add Item
         </Button>
 
         <Stack spacing={6}>
@@ -78,23 +78,48 @@ const DataTable = ({ data }) => {
         onSortColumn={handleSortColumn}
       >
         <Column flexGrow={1} sortable>
-          <HeaderCell>Category</HeaderCell>
-          <Cell dataKey="category" />
+          <HeaderCell>SKU</HeaderCell>
+          <Cell dataKey="SKU" />
+        </Column>
+
+        <Column flexGrow={1} sortable>
+          <HeaderCell>Name</HeaderCell>
+          <Cell dataKey="Name" />
+        </Column>
+
+        <Column flexGrow={1} sortable>
+          <HeaderCell>Size</HeaderCell>
+          <Cell dataKey="Size" />
+        </Column>
+
+        <Column flexGrow={1} sortable>
+          <HeaderCell>Pack</HeaderCell>
+          <Cell dataKey="Pack" />
         </Column>
 
         <Column flexGrow={1} sortable>
           <HeaderCell>Department</HeaderCell>
-          <Cell dataKey="department" />
-        </Column>
-
-        <Column flexGrow={1} sortable>
-          <HeaderCell>Sub Category</HeaderCell>
-          <Cell dataKey="sub_category" />
+          <Cell dataKey="Department" />
         </Column>
 
         <Column flexGrow={1}>
-          <HeaderCell>Status</HeaderCell>
-          <StatusCell dataKey="status" />
+          <HeaderCell>Category</HeaderCell>
+          <Cell dataKey="Category" />
+        </Column>
+
+        <Column flexGrow={1}>
+          <HeaderCell>Unit Cost</HeaderCell>
+          <Cell dataKey="UnitCost" />
+        </Column>
+
+        <Column flexGrow={1}>
+          <HeaderCell>Sale Price</HeaderCell>
+          <Cell dataKey="SalePrice" />
+        </Column>
+
+        <Column flexGrow={1}>
+          <HeaderCell>Item Type</HeaderCell>
+          <Cell dataKey="ItemType" />
         </Column>
 
         <Column flexGrow={1}>

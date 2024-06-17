@@ -14,32 +14,32 @@ export const appNavs = [
     eventKey: 'item-management',
     icon: <Icon as={VscTable} />,
     title: 'Item Management',
-    to: '/home/department',
+    to: '/home/item-management/',
     children: [
       {
         eventKey: 'department',
         title: 'Department',
-        to: '/home/department'
+        to: '/home/item-management/department'
       },
       {
         eventKey: 'category',
         title: 'Category',
-        to: '/home/category'
+        to: '/home/item-management/category'
       },
       {
         eventKey: 'sub-category',
         title: 'Sub Category',
-        to: '/home/subcategory'
+        to: '/home/item-management/subcategory'
       },
       {
         eventKey: 'items',
         title: 'Items',
-        to: '/home/items'
+        to: '/home/item-management/items'
       },
       {
         eventKey: 'item-group',
         title: 'Item Group',
-        to: '/home/itemgroup'
+        to: '/home/item-management/itemgroup'
       }
     ]
   },
@@ -47,6 +47,13 @@ export const appNavs = [
     eventKey: 'setting',
     icon: <Icon as={MdModeEditOutline} />,
     title: 'Setting',
-    to: '/home/setting'
+    to: '/home/setting',
+    children: [
+      {
+        eventKey: 'tax',
+        title: 'Tax',
+        to: '/home/setting/tax'
+      }
+    ]
   }
 ];

@@ -34,7 +34,7 @@ const DrawerView = (props: DrawerProps) => {
       {...rest}
     >
       <Drawer.Header>
-        <Drawer.Title>Add a new Category</Drawer.Title>
+        <Drawer.Title>Add a new Sub Category</Drawer.Title>
         <Drawer.Actions>
           <Button onClick={onClose} appearance="primary">
             Confirm
@@ -48,16 +48,16 @@ const DrawerView = (props: DrawerProps) => {
       <Drawer.Body>
         <Form fluid>
           <Form.Group>
-            <Form.ControlLabel>Category</Form.ControlLabel>
-            <Form.Control name="category" placeholder="Enter Category" />
+            <Form.ControlLabel>Name</Form.ControlLabel>
+            <Form.Control name="sub_category" placeholder="Enter Name" />
           </Form.Group>
 
-          <p style={{ paddingTop: '20px' }}>Department</p>
+          <p style={{ paddingTop: '20px' }}>Parent Category</p>
           <div style={{ paddingTop: '5px' }}>
             <InputPicker
               data={data}
               style={{ width: 224 }}
-              placeholder="Select Department"
+              placeholder="Select Parent Category"
             />
           </div>
         </Form>
